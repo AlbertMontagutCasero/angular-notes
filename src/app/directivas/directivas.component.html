@@ -1,0 +1,85 @@
+<h1>{{titulo}}</h1>
+<hr/>
+<strong>Empleado Estrella:</strong>
+<h1> DIRECTIVA NGIF </h1>
+<div *ngIf="trabajadorExterno"><!-- Condicional IF, trabajador Externo es un boolean -->
+  <button (click)="isExterno(false)">Mostrar Empleado</button>
+  <ul>
+    <li>{{empleadoEstrella.nombre}}</li>
+    <li>{{empleadoEstrella.edad}}</li>
+    <li>{{empleadoEstrella.cargo}}</li>
+    <li *ngIf="empleadoEstrella.contratado">Esta Contratado</li>
+    <li *ngIf="!empleadoEstrella.contratado">No Esta Contratado</li>
+  </ul>
+</div>
+<div *ngIf="!trabajadorExterno">
+  <button (click)="isExterno(true)">Mostrar Trabajador</button> <!-- Capturar Evento Click -->
+  <ul>
+    <li>{{trabajadores[1].nombre}}</li>
+    <li>{{trabajadores[1].edad}}</li>
+    <li>{{trabajadores[1].cargo}}</li>
+    <li *ngIf="trabajadores[1].contratado">Esta Contratado</li>
+    <li *ngIf="!trabajadores[1].contratado">No esta contratado</li>
+  </ul>
+</div>
+
+<hr/>
+<h1> DIRECTIVA NGFOR </h1>
+<h3>Listado de empleados</h3>
+<ul>
+  <li *ngFor="let trabajador of trabajadores; let i = index">
+    <strong>Empleado {{i + 1}}:</strong>
+    <ul>
+      <li>{{trabajador.nombre}}</li>
+      <li>{{trabajador.edad}}</li>
+      <li>{{trabajador.cargo}}</li>
+      <li *ngIf="trabajador.contratado">Esta Contratado</li>
+      <li *ngIf="!trabajador.contratado">No esta contratado</li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+<h1> DIRECTIVA NGSWITCH + NGSWITCHCASE y NGSTYLE</h1>
+<h3>Colores Switch</h3>
+<ul [ngSwitch]="color"> <!-- color es la propiedad a evaluar -->
+  <li *ngSwitchCase="'red'" [ngStyle]="{
+    'background': color,
+    'color':'white',
+    'padding':'20px'
+  }"> <!-- hay que poner comillas simples para indicar que es un string -->
+    ES DE COLOR ROJO
+  </li>
+  <li *ngSwitchCase="'green'" [ngStyle]="{
+    'background': color,
+    'color':'white',
+    'padding':'20px'
+  }">
+    ES DE COLOR VERDE
+  </li>
+  <li *ngSwitchCase="'blue'" [ngStyle]="{
+    'background': color,
+    'color':'white',
+    'padding':'20px'
+  }">
+    ES DE COLOR BLUE
+  </li>
+</ul>
+<hr>
+<h1>TWO DATA BINDING</h1>
+<h3>Selector de colores</h3>
+<button (click)="logColorSelected()"> MOSTRAR LOG</button>
+<input type="text" [(ngModel)]="colorSeleccionado"/> <!-- permite vincular un atributo del componente con el texto introducido en el input -->
+<pre>
+  <strong>color elegido:</strong>
+  {{colorSeleccionado}}</pre>
+<div [ngStyle]="{
+  'background' : colorSeleccionado,
+  'width' : '200px',
+  'height' : '200px',
+  'float': 'right',
+  'margin-right' : '50%'
+     }">
+</div>
+<div style="clear:both"></div>
+

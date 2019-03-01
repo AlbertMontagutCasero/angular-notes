@@ -75,8 +75,7 @@ Son servicios que nos proveen de datos o funcionalidades mediante sus métodos. 
 
 #### Directivas
 
-Son funcionalidades aplicables al DOM y a los elementos HTML en las plantillas de un componente. Por ejemplo una directiva puede servir para controlar que un div se muestre o no o recorrer un array en la 
-vista (directivas estructurales, estructuras condicionales y de control) o incluso también puede servir para darle una un estilo u otro aun elemento del HTML o también para interactuar con el modelo de datos 
+Son funcionalidades aplicables al DOM y a los elementos HTML en las plantillas de un componente. Por ejemplo una directiva puede servir para controlar que un div se muestre o no o recorrer un array en la vista (directivas estructurales, estructuras condicionales y de control) o incluso también puede servir para darle una un estilo u otro aun elemento del HTML o también para interactuar con el modelo de datos 
 del componente. 
 
 ![](https://angular.io/generated/images/guide/architecture/overview2.png)
