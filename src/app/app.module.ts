@@ -10,7 +10,8 @@ import {FrutaComponent} from './fruta/fruta.component';
 import {EmpleadosComponent} from './empleados/empleados.component';
 import {TipoDeDatosComponent} from './tipo-de-datos/tipo-de-datos.component';
 import {DirectivasComponent} from './directivas/directivas.component';
-import { HomeComponent } from './home/home.component';
+import {HomeComponent} from './home/home.component';
+import {ContactoComponent} from './contacto/contacto.component';
 
 
 @NgModule({ // Todos los componentes han de estar registrados en este modulo
@@ -20,15 +21,15 @@ import { HomeComponent } from './home/home.component';
     EmpleadosComponent,
     TipoDeDatosComponent,
     DirectivasComponent,
-    HomeComponent
+    HomeComponent,
+    ContactoComponent
   ],
   imports: [ // Declara diferentes modulos para poder usarlos globalmente
     BrowserModule,
     FormsModule, // Modulo que permite hace Two data binding
     AppRoutingModule // Modulo de rutas
   ],
-  providers: [
-  ], // Declara servicios y configuraciones para que se puedan usar globalmente
+  providers: [], // Declara servicios y configuraciones para que se puedan usar globalmente
   bootstrap: [AppComponent] // Componente principal con el que este modulo se pueda lanzar
 })
 export class AppModule {
