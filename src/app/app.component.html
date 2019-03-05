@@ -1,5 +1,20 @@
-<!-- <app-tipo-de-datos></app-tipo-de-datos> -->
+<!-- <app-tipo-de-datos></app-tipo-de-datos> --> <!-- Añadir un componente -->
 <!--<app-empleados></app-empleados>-->
 <!--<app-directivas></app-directivas>-->
+<nav>
+  <a [routerLink]="['/home']" [routerLinkActive]="['activado']" >Home</a>
+  -
+  <a [routerLink]="['/fruta']" [routerLinkActive]="['activado']">Fruta</a>
+  -
+  <a [routerLink]="['/empleados']" [routerLinkActive]="['activado']">Empleados</a>
+  -
+  <a [routerLink]="['/directivas']" [routerLinkActive]="['activado']">Directivas</a>
+  -
+  <a [routerLink]="['/tipo-de-datos']" [routerLinkActive]="['activado']">Tipo de datos</a>
+  -
+  <a [routerLink]="['/contacto']" [routerLinkActive]="['activado']">Contacto</a>
+</nav>
+
+<hr>
 <router-outlet></router-outlet> <!-- Etiqueta de componente de angular que cargara el componente
                                      necesario segun la configuracion del routing -->

@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactoComponent implements OnInit {
 
-  constructor() { }
+  public titulo: string;
+
+
+  constructor() {
+    this.titulo = 'Pagina de Contacto de la web';
+  }
 
   ngOnInit() {
   }
