@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.fondoAzul{
+  background-color : lightblue !important;
+}
+
+.fondoAmarillo{
+  background-color : lightyellow !important;
+}
+
+.fondoVerde {
+  background-color : lightgreen !important;
+}
+
+.letraGrande { font-size: 20px }

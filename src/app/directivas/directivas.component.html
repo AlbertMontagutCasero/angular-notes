@@ -66,11 +66,21 @@
   </li>
 </ul>
 <hr>
-<h1>TWO DATA BINDING</h1>
+<h1>TWO DATA BINDING, NGClass y Atributos HTML </h1>
 <h3>Selector de colores</h3>
 <button (click)="logColorSelected()"> MOSTRAR LOG</button>
 <input type="text" [(ngModel)]="colorSeleccionado"/> <!-- permite vincular un atributo del componente con el texto introducido en el input -->
-<pre>
+<pre
+  [style.border] = "colorSeleccionado == 'red' ? '5px solid black'  : '1px solid green'"
+  [class.fondoAzul] = "colorSeleccionado == 'blue'"
+  [ngClass]="['letraGrande']"
+  [ngClass] = "{
+    fondoAmarillo : colorSeleccionado == 'yellow',
+    fondoVerde : colorSeleccionado == 'green'
+
+  }"
+> <!-- Utilizamos los atributos html -->
+
   <strong>color elegido:</strong>
   {{colorSeleccionado}}</pre>
 <div [ngStyle]="{
