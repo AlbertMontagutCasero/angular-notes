@@ -80,3 +80,6 @@ del componente.
 
 ![](https://angular.io/generated/images/guide/architecture/overview2.png)
 
+#### Pipes
+Los pipes tuberias o filtros son pequeñas funciones que nos sirven para realizar alguna tarea en nuestra vista o plantilla de angular, por ejemplo transformar fechas, convertir caracteres a minuscula o mayuscula.
+  

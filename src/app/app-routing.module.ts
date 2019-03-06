@@ -19,6 +19,7 @@ const routes: Routes = [
   {path: 'tipo-de-datos', component: TipoDeDatosComponent},
   {path: 'home', component: HomeComponent},
   {path: 'contacto', component: ContactoComponent},
+  {path: 'contacto/:page', component: ContactoComponent}, /* Routing with get parameters*/
   {path: '**', component: HomeComponent}, // 404 : not found IMPORTANTE: REVISA POR ORDEN ASI QUE ESTO TIENE QUE IR AL FINAL
 ];
 
