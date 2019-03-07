@@ -1,3 +1,11 @@
+<p> fecha {{fecha | date: 'fullDate' | uppercase}} </p>
+<p> fecha {{fecha | date: 'dd/mm/yyyy' |lowercase}} </p>
+
+<p> {{nombre | uppercase }}</p>
+<p> {{nombre | lowercase }}</p>
+
+<p> {{5 | conversor: 5}}</p> <!-- pipe con parametro -->
+
 <label>
   <input type="text" [(ngModel)]="prendaAGuardar">
 </label>

@@ -11,6 +11,7 @@ import {TipoDeDatosComponent} from './tipo-de-datos/tipo-de-datos.component';
 import {DirectivasComponent} from './directivas/directivas.component';
 import {HomeComponent} from './home/home.component';
 import {ContactoComponent} from './contacto/contacto.component';
+import {ConversorPipe} from './pipes/conversor.pipe';
 
 
 @NgModule({ // Todos los componentes han de estar registrados en este modulo
@@ -21,7 +22,8 @@ import {ContactoComponent} from './contacto/contacto.component';
     TipoDeDatosComponent,
     DirectivasComponent,
     HomeComponent,
-    ContactoComponent
+    ContactoComponent,
+    ConversorPipe
   ],
   imports: [ // Declara diferentes modulos para poder usarlos globalmente
     BrowserModule,

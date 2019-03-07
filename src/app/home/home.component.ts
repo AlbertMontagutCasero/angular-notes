@@ -13,10 +13,14 @@ export class HomeComponent implements OnInit {
   public listadoRopa: Array<string>;
   public prendaAGuardar: string;
 
+  public fecha;
+  public nombre = 'JUAN LOPEZ MARTINEZ';
+
   constructor(
     private ropaService: RopaService
   ) {
     this.titulo = 'pagina principal';
+    this.fecha = new Date(2017, 4, 15);
   }
 
   ngOnInit() {
