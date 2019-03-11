@@ -11,6 +11,7 @@ import {HomeComponent} from './home/home.component';
 import {TipoDeDatosComponent} from './tipo-de-datos/tipo-de-datos.component';
 import {ContactoComponent} from './contacto/contacto.component';
 import {FormularioComponent} from './formulario/formulario.component';
+import {PlantillasComponent} from './plantillas/plantillas.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent}, // home
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'contacto', component: ContactoComponent},
   {path: 'formulario' , component: FormularioComponent},
   {path: 'contacto/:page', component: ContactoComponent}, /* Routing with get parameters*/
+  {path: 'plantillas' , component: PlantillasComponent},
   {path: '**', component: HomeComponent}, // 404 : not found IMPORTANTE: REVISA POR ORDEN ASI QUE ESTO TIENE QUE IR AL FINAL
 ];
 

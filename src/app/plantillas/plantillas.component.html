@@ -1,0 +1,17 @@
+{{titulo}}
+
+<button (click)="cambiarAdmin()">cambiar admin state</button>
+<br>
+
+<div *ngIf="administrador;then admin else noAdmin">
+</div>
+
+
+
+<ng-template #noAdmin>
+  <strong style="background:red;color:white;">NO ERES el administrador de la webapp</strong>
+</ng-template>
+
+<ng-template #admin>
+  <strong style="background:yellow;color:black;">ERES el administrador de la webapp</strong>
+</ng-template>
