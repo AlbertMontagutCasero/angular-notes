@@ -1,0 +1,14 @@
+{{titulo}}
+
+<hr />
+<app-input-child
+  [propertyOne]="'valor de la propiedad uno'"
+  [renamedPropertyTwo]="'valor de la propiedad dos'"
+  (fromChild)="recibirDatos($event)"
+>
+
+</app-input-child>
+
+<div *ngIf="fromChildObject">
+  Mensaje desde el hijo {{fromChildObject.nombre}}
+</div>

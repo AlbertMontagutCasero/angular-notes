@@ -15,6 +15,8 @@ import {ContactoComponent} from './contacto/contacto.component';
 import {ConversorPipe} from './pipes/conversor.pipe';
 import {FormularioComponent} from './formulario/formulario.component';
 import { PlantillasComponent } from './plantillas/plantillas.component';
+import { InputComponent } from './input/input.component';
+import { InputChildComponent } from './input/input-child/input-child.component';
 
 
 @NgModule({ // Todos los componentes han de estar registrados en este modulo
@@ -28,7 +30,9 @@ import { PlantillasComponent } from './plantillas/plantillas.component';
     ContactoComponent,
     ConversorPipe,
     FormularioComponent,
-    PlantillasComponent
+    PlantillasComponent,
+    InputComponent,
+    InputChildComponent
   ],
   imports: [ // Declara diferentes modulos para poder usarlos globalmente
     BrowserModule,
